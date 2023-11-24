@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+</head>
+<body>
+  <h1>Welcome, <span id="userEmail"></span>!</h1>
+  <div id="dashboardContent">
+   
+  </div>
+
+  <script>
+    const userEmail = decodeURIComponent(new URLSearchParams(window.location.search).get('email'));
+
+    document.getElementById('userEmail').textContent = userEmail;
+
+    document.getElementById('dashboardContent').innerHTML = '<p>This is personalized content for ' + userEmail + '</p>';
+  </script>
+</body>
+</html>
